@@ -1,9 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <version>0.0.1</version>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>c5m.ReadingNotes.Domain</PackageId>
+    <Authors>Frank Boucher</Authors>
+    <Company>c5m</Company>
+    <Description>Simple Plain Old Class Object used across application of the ReadingNotes system.</Description>
+    <PackageTags>ReadingNotes, kindle, note, notes</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/FBoucher/ReadingNotes.Domain</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+  <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 </Project>
