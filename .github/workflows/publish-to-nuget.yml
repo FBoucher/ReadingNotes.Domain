@@ -23,8 +23,10 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish c5m.ReadingNotes.Domain
-      uses: brandedoutcast/publish-nuget@v2.5.2
+      uses: brandedoutcast/publish-nuget@v2.5.5
       with:
           PACKAGE_NAME: c5m.ReadingNotes.Domain
-          PROJECT_FILE_PATH: ReadingNotes.Domain.csproj
+          PROJECT_FILE_PATH: /ReadingNotes.Domain.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          NUGET_SOURCE: https://api.nuget.org
+
