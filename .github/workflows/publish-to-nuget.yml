@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish c5m.ReadingNotes.Domain
-      uses: alirezanet/publish-nuget@v3.0.0
+      uses: alirezanet/publish-nuget@v3.0.4
       with:
           PROJECT_FILE_PATH: ReadingNotes.Domain.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
