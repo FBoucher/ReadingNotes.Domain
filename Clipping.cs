@@ -15,7 +15,7 @@ public class Clipping
 
     public int? BeginningPage
     {
-        get { return GetBeginningOfRange(Page); }
+        get { return GetBeginningOfRange(Page ); }
     }
 
     public int? BeginningLocation
@@ -23,7 +23,7 @@ public class Clipping
         get { return GetBeginningOfRange(Location); }
     }
 
-    private int? GetBeginningOfRange(string range)
+    private int? GetBeginningOfRange(string? range)
     {
         if (String.IsNullOrWhiteSpace(range)) return null;
 
