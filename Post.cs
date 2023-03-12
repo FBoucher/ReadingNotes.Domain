@@ -1,4 +1,5 @@
 
+   /// <summary>Data saved to Azure Table Storage from a post in the pre-read process</summary>
     public class Post
     {
         public string? Title { get; set; }
