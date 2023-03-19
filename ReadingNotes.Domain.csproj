@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <EnablePackageValidation>true</EnablePackageValidation>
      <DebugType>embedded</DebugType>
     <TargetFramework>net7.0</TargetFramework>
@@ -18,6 +18,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Data.Tables" Version="12.8.0" />
+  </ItemGroup>
 </Project>
