@@ -3,9 +3,9 @@ using System.Collections.Generic;
 namespace ReadingNotes.Domain;
 
 /// <summary>
-/// ReadingNotes Categories
+/// Notes Categories
 /// </summary>
-public static class ReadingNoteCategories
+public static class NoteCategories
 {
     /// <summary>
     /// Get a dictionary to change the short version by the long version of category name.

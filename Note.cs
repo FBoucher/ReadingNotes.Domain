@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace ReadingNotes.Domain;
 
-public class ReadingNote
+public class Note
 {
     /// <summary>
     /// Title of the post
@@ -26,7 +26,7 @@ public class ReadingNote
     private string _category = String.Empty;
 
     ///<summary>
-    /// Set using the first  <see cref="ReadingNote.Tags"/> and part of the  <see cref="ReadingNoteCategories"/> 
+    /// Set using the first  <see cref="Note.Tags"/> and part of the  <see cref="NoteCategories"/> 
     /// </summary>
     public string Category
     {
@@ -68,24 +68,24 @@ public class ReadingNote
     }
 
 
-    public static ReadingNote? CreateFromString(string DeserializeObj)
+    public static Note? CreateFromString(string DeserializeObj)
     {
-        return JsonSerializer.Deserialize<ReadingNote>(DeserializeObj, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        return JsonSerializer.Deserialize<Note>(DeserializeObj, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 
     private string GetCategory()
     {
         string category = "misc";
-        string readingNoteCategories = string.Empty;
+        string noteCategories = string.Empty;
 
         if (!String.IsNullOrEmpty(this.Tags))
         {
             var newListTgas = this.Tags.Split('.');
 
-            if (ReadingNoteCategories.GetCategories.ContainsKey(newListTgas[0]))
+            if (NoteCategories.GetCategories.ContainsKey(newListTgas[0]))
                 category = newListTgas[0];
         }
 
-        return ReadingNoteCategories.GetCategories[category];
+        return NoteCategories.GetCategories[category];
     }
 }
