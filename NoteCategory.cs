@@ -18,6 +18,7 @@ public static class NoteCategories
             {"dev", "Programming"},
             {"devops", "DevOps"},
             {"misc", "Miscellaneous"},
-             {"top", "Suggestion of the week"}
+             {"top", "Suggestion of the week"},
+              {"oss", "Open Source"}
         };
 }
