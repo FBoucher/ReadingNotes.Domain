@@ -1,6 +1,8 @@
 
 using System.Runtime.Serialization;
 using Azure.Data.Tables;
+using ReadingNotes.Domain;
+
 public class Summary : ITableEntity
 {
     public string PartitionKey { get; set; }
@@ -19,4 +21,7 @@ public class Summary : ITableEntity
 
     [DataMember(Name = "isgenerated")]
   public string? IsGenerated { get; set; }
+
+[IgnoreDataMember]
+  public RNotes? RNotes { get; set; }
 }
