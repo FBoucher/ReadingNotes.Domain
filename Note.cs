@@ -82,10 +82,9 @@ public class Note
         {
             var newListTgas = this.Tags.Split('.');
 
-            if (NoteCategories.GetCategories.ContainsKey(newListTgas[0]))
-                category = newListTgas[0];
+            category = NoteCategories.GetCategories(newListTgas[0]);
         }
 
-        return NoteCategories.GetCategories[category];
+        return NoteCategories.GetCategories(category);
     }
 }

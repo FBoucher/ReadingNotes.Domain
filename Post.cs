@@ -34,8 +34,8 @@ public class Post : ITableEntity
     [DataMember(Name="word_count")]
     public int Word_count { get; set; }
 
-   [DataMember(Name="direction")]
-     public string? Direction { get; set; }
+  [DataMember(Name="direction")]
+    public string? Direction { get; set; }
 
     [DataMember(Name="total_pages")]
     public int Total_pages { get; set; }
@@ -43,7 +43,7 @@ public class Post : ITableEntity
     [DataMember(Name="rendered_pages")]
     public int Rendered_pages { get; set; }
 
-   [DataMember(Name="id")]
+  [DataMember(Name="id")]
     public string Id { get; set; }
 
     public string PartitionKey { get; set; }
