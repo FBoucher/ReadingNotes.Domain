@@ -7,13 +7,7 @@ namespace ReadingNotes.Domain;
 /// </summary>
 public static class NoteCategories
 {
-    /// <summary>
-    /// Get a dictionary to change the short version by the long version of category name.
-    /// </summary>
-    public static string GetCategories(string? category)
-    {
-        var categories = new Dictionary<string, string>
-                                                    {
+    public static Dictionary<string, string> Category = new Dictionary<string, string>{
                                                         {"cloud", "Cloud"},
                                                         {"data", "Data"},
                                                         {"database", "Databases"},
@@ -25,13 +19,19 @@ public static class NoteCategories
                                                         {"top", "Suggestion of the week"},
                                                         {"del", "del"}
                                                     };
-        if (!String.IsNullOrEmpty(category) && categories.ContainsKey(category))
+    /// <summary>
+    /// Get a dictionary to change the short version by the long version of category name.
+    /// </summary>
+    public static string GetCategories(string? category)
+    {
+        if (!String.IsNullOrEmpty(category) && Category.ContainsKey(category))
         {
-            return categories[category];
+            return Category[category];
         }
         else
         {
-            return categories["misc"];
+            return Category["misc"];
         }
     }
 }
+

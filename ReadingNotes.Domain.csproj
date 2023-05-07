@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.1.10</Version>
+    <Version>1.1.11</Version>
     <EnablePackageValidation>true</EnablePackageValidation>
      <DebugType>embedded</DebugType>
     <TargetFramework>net7.0</TargetFramework>
